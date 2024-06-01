@@ -9,6 +9,8 @@ from sumy.parsers.plaintext import PlaintextParser
 import re
 
 import streamlit as st
+# import nltk
+# nltk.download('punkt')
 
 
 def extract_salutation(text):
