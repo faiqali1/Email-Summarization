@@ -4,7 +4,7 @@
 # If you need more help, visit the Dockerfile reference guide at
 # https://docs.docker.com/engine/reference/builder/
 
-ARG PYTHON_VERSION=3.9.6
+ARG PYTHON_VERSION=3.10.8
 FROM python:${PYTHON_VERSION}-slim as base
 
 # Prevents Python from writing pyc files.
@@ -40,8 +40,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 # RUN python -m pip install nltk
 
 RUN python -m nltk.downloader punkt
-
-# RUN python -c "import nltk; nltk.download('punkt')"
 
 # USER appuser
 
